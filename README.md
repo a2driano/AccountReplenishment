@@ -1,7 +1,7 @@
-# AccountReplenishment
+# Account Replenishment
 Technologies used: Java, Spring MVC, Spring Security, Spring Data JPA, Pagination, Hibernate, MySQL, JPA/JSTL, jQuery, Tomcat. 
 
---- After start application, you can fill the DB data from resources/Fill_DB.SQL
+--- After start application, you can fill the DB data from: resources/Fill_DB.SQL
 (and change "hibernate.hbm2ddl.auto" in RootContextCofig to "validate")---
 
 System of replenisment of balance users from DB.
