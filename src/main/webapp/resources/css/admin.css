@@ -1,0 +1,270 @@
+.body {
+    margin: 0%;
+    position: absolute;
+    padding: 0px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgba(92, 119, 123, 0.49);
+}
+
+.container {
+    position: relative;
+    margin: auto;
+    display: block;
+    background-color: white;
+    width: 700px;
+    height: 510px;
+    text-align: center;
+}
+
+.headdiv {
+    width: 100%;
+    height: 50px;
+    background-color: darkred;
+    color: white;
+    line-height: 50px;
+    font-size: 25px;
+
+}
+
+.ref {
+    text-decoration: none;
+}
+
+.info {
+    position: relative;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    width: 635px;
+    text-align: left;
+}
+
+.infobottom {
+    position: relative;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 635px;
+    text-align: left;
+}
+
+.infoinside {
+    position: relative;
+    width: 370px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+.infoinsiderigth {
+    text-align: right;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 265px;
+    height: 20px;
+}
+
+.active {
+    color: #afafaf;
+}
+
+.even {
+    background-color: #e3e3e3;
+}
+
+table {
+    border-spacing: 0px;
+}
+
+.tablehead {
+    position: relative;
+    margin: auto;
+    width: 635px;
+}
+
+.table {
+    background-color: darkred;
+    color: white;
+    height: 25px;
+    line-height: 25px;
+    font-size: 15px;
+}
+
+#email {
+    width: 300px;
+    border: 1px white solid;
+}
+
+#balance {
+    width: 120px;
+    border: 1px white solid;
+}
+
+#date {
+    width: 200px;
+    border: 1px white solid;
+}
+
+.tablebody {
+    border: 1px #a5a5a5 solid;
+}
+
+#emailbody {
+    padding-left: 10px;
+    text-align: left;
+
+}
+
+#balancebody {
+    padding-right: 10px;
+    text-align: right;
+}
+
+.empty {
+    width: 632px;
+    text-align: center;
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #5c5c5c;
+    color: white;
+    font-size: 12px;
+}
+
+/**Modal window*/
+#modal_form {
+    width: 300px;
+    height: 200px;
+    background: #fff;
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -150px;
+    display: none;
+    opacity: 0;
+    z-index: 5;
+}
+
+.modal_header {
+    width: 300px;
+    height: 30px;
+    background-color: darkred;
+    color: white;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+.modal_button_div {
+    position: relative;
+    margin: auto;
+    margin-top: 15px;
+    width: 300px;
+}
+
+.modal_button {
+    margin: 21px;
+    margin-top: 5px;
+    width: 93px;
+    height: 35px;
+}
+
+#modal_button_click {
+    background-color: #e39c36;
+    color: white;
+}
+
+#modal_button_click:hover {
+    background-color: #d30000;
+}
+
+#modal_form #modal_close {
+    width: 30px;
+    height: 30px;
+    background-color: #d30000;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    display: block;
+}
+
+#modal_form #modal_close:hover {
+    color: black;
+    background-color: white;
+}
+
+#overlay {
+    z-index: 3;
+    position: fixed;
+    background-color: #000;
+    opacity: 0.8;
+    -moz-opacity: 0.8;
+    filter: alpha(opacity=80);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: none;
+}
+
+#alert_message {
+    position: absolute;
+    top: 43px;
+    left: 77px;
+    color: red;
+    font-size: 12px;
+}
+
+/*JOURNAL*/
+.tablehead_journal {
+    position: relative;
+    margin: auto;
+    width: 660px;
+}
+.table_journal {
+    background-color: darkred;
+    color: white;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+}
+#email_admin {
+    width: 230px;
+    border: 1px white solid;
+}
+#email_journal {
+    width: 230px;
+    border: 1px white solid;
+}
+
+#date_journal {
+    width: 95px;
+    border: 1px white solid;
+}
+
+#balance_journal {
+    width: 105px;
+    border: 1px white solid;
+}
+#emailbody_journal {
+    padding-left: 10px;
+    text-align: left;
+}
+#emailbody_journal_user {
+    padding-left: 10px;
+    text-align: left;
+}
+.tableinfo_journal{
+    font-size: 15px;
+}

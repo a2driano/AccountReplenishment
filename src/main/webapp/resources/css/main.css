@@ -1,0 +1,106 @@
+.body {
+    margin: 0%;
+    position: absolute;
+    padding: 0%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgba(92, 119, 123, 0.49);
+}
+
+.container {
+    position: relative;
+    margin: auto;
+    /*margin-top: -21px;*/
+    display: block;
+    background-color: white;
+    width: 700px;
+    height: 510px;
+    text-align: center;
+}
+
+.headdiv {
+    width: 100%;
+    height: 80px;
+    background-color: darkred;
+    color: white;
+    line-height: 80px;
+    font-size: 30px;
+}
+.ref {
+    text-decoration: none;
+}
+
+.headtext {
+    margin: 35px;
+}
+
+.headtextreg {
+    margin: 65px;
+}
+
+.headtextuser {
+    margin: 60px;
+}
+
+.forminput {
+    position: relative;
+    margin: auto;
+    margin-bottom: 15px;
+    width: 300px;
+    border: none;
+    text-align: right;
+}
+
+.forminputreg {
+    position: relative;
+    margin: auto;
+    margin-bottom: 15px;
+    width: 363px;
+    border: none;
+    text-align: right;
+}
+
+.buttondiv {
+    position: relative;
+    margin: auto;
+    width: 300px;
+    text-align: left;
+}
+
+.buttondivreg {
+    position: relative;
+    margin: auto;
+    width: 363px;
+    text-align: left;
+}
+
+.buttonclass {
+    width: 80px;
+    position: absolute;
+    right: 0px;
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #5c5c5c;
+    color: white;
+    font-size: 12px;
+}
+/*ERRORS*/
+.error{
+    color: red;
+    text-align: right;
+    font-size: 12px;
+}
+.success{
+    color: green;
+    text-align: right;
+    font-size: 12px;
+}
