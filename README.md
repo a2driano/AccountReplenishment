@@ -4,7 +4,7 @@ Technologies used: Java, Spring MVC, Spring Security, Spring Data JPA, Paginatio
 --- After start application, you can fill the DB data from: resources/Fill_DB.SQL
 (and change "hibernate.hbm2ddl.auto" in RootContextCofig to "validate")---
 
-System of replenisment of balance users from DB.
+System of replenisment balance of users.
 User have a few roles: GUEST, USER and ADMIN. Start page have a form for enter to account or button to create a new account. 
 GUEST can create a new account and after this-enter to his user page.
 User can see his balance in special page (/userpage). ADMIN have the right to review list of users, 
