@@ -90,12 +90,13 @@ public class UserServiceImpl implements UserService {
     public List<UserDTO> getAllUserPlusPagination(String email, Pageable pageRequest) {
         if (email == null)
             email = "";
-        List<UserDTO> userDTOList = new ArrayList<>();
+        List<UserDTO> userDTOList;
         try {
             userDTOList = convertUtilUser
                     .convertUserListToUserDTOList(userRepository.getAllUserPlusPagination(email, pageRequest));
         } catch (HibernateException e) {
             LOGGER.error("{}", e.toString(), e);
+            return null;
         }
         return userDTOList;
     }

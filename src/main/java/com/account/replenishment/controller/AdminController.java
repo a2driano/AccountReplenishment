@@ -48,7 +48,7 @@ public class AdminController {
     public ModelAndView printWelcome(@PathVariable Integer numberPage,
                                      @RequestParam(value = "email", required = false) String email) {
         int countInfoPerPage = 10;//count result per page
-        long countOfPage = (userService.getCountOfUsersPlusPagination(email));
+        long countOfPage = userService.getCountOfUsersPlusPagination(email);
         long lastPage = countOfPage % countInfoPerPage == 0 ? countOfPage / countInfoPerPage : countOfPage / countInfoPerPage + 1;
 
         //option for search logic
@@ -61,18 +61,27 @@ public class AdminController {
 
         Pageable pageRequest = new PageRequest(pageNumber, countInfoPerPage);
         List<UserDTO> list = userService.getAllUserPlusPagination(email, pageRequest);
+
         ModelAndView modelAndView = new ModelAndView("admin");
-        //if search don`t return any result
-        if (list.size() != 0) {
-            modelAndView.addObject("users", list);
-        } else {
-            modelAndView.addObject("message", "Поиск не дал результатов!");
-        }
         modelAndView.addObject("currentPage", numberPage);
         modelAndView.addObject("lastPage", lastPage);
         modelAndView.addObject("beginIndex", begin);
         modelAndView.addObject("endIndex", end);
         modelAndView.addObject("searchValue", email);
+        //if search don`t return any result
+        if (list == null) {
+            modelAndView.addObject("message", "Ошибка сервера. Повторите через 5 мин.");
+            modelAndView.addObject("currentPage", 1);
+            modelAndView.addObject("lastPage", 0);
+            modelAndView.addObject("endIndex", 0);
+        } else if (list.size() == 0) {
+            modelAndView.addObject("message", "Поиск не дал результатов!");
+            modelAndView.addObject("currentPage", 1);
+            modelAndView.addObject("lastPage", 0);
+            modelAndView.addObject("endIndex", 0);
+        } else {
+            modelAndView.addObject("users", list);
+        }
         return modelAndView;
     }
 
