@@ -1,5 +1,6 @@
 package com.account.replenishment.util;
 
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.text.ParseException;
@@ -14,6 +15,8 @@ import java.util.Date;
  */
 @Component
 public class ConvertDate {
+    private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(ConvertDate.class);
+
     /**
      * Method convert string to date (if string have a right format)
      * or return default time ['January 1, 1970, 00:00:00 GMT','NOW']
@@ -38,7 +41,7 @@ public class ConvertDate {
         try {
             dateCheck = sdf.parse(date);
         } catch (ParseException e) {
-            System.err.println(e + "::Parsing exception");
+            LOGGER.error("{}", e.toString(), e);
         }
         return dateCheck;
     }

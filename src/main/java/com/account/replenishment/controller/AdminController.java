@@ -59,6 +59,7 @@ public class AdminController {
         int end = Math.min(begin + 2, (int) lastPage);
         int pageNumber = numberPage - 1;
 
+        //Create Pageable object
         Pageable pageRequest = new PageRequest(pageNumber, countInfoPerPage);
         List<UserDTO> list = userService.getAllUserPlusPagination(email, pageRequest);
 
@@ -68,6 +69,7 @@ public class AdminController {
         modelAndView.addObject("beginIndex", begin);
         modelAndView.addObject("endIndex", end);
         modelAndView.addObject("searchValue", email);
+
         //if search don`t return any result
         if (list == null) {
             modelAndView.addObject("message", "Ошибка сервера. Повторите через 5 мин.");
@@ -124,21 +126,32 @@ public class AdminController {
         int end = Math.min(begin + 2, (int) lastPage);
         int pageNumber = numberPage - 1;
 
+        //Create Pageable object
         Pageable pageRequest = new PageRequest(pageNumber, countInfoPerPage);
         List<JournalDTO> list = journalService.getJournalsFromCustomPeriod(dateParam[0], dateParam[1], pageRequest);
+
         ModelAndView modelAndView = new ModelAndView("admin_journal");
-        //if search don`t return any result
-        if (list.size() != 0) {
-            modelAndView.addObject("journal", list);
-        } else {
-            modelAndView.addObject("message", "Введены некоректные данные! Необходимо: дд/мм/гггг (день/месяц/год)");
-        }
         modelAndView.addObject("currentPage", numberPage);
         modelAndView.addObject("lastPage", lastPage);
         modelAndView.addObject("beginIndex", begin);
         modelAndView.addObject("endIndex", end);
         modelAndView.addObject("searchValueStart", dateStartStr);
         modelAndView.addObject("searchValueEnd", dateEndStr);
+
+        //if search don`t return any result
+        if (list == null) {
+            modelAndView.addObject("message", "Ошибка сервера. Повторите через 5 мин.");
+            modelAndView.addObject("currentPage", 1);
+            modelAndView.addObject("lastPage", 0);
+            modelAndView.addObject("endIndex", 0);
+        } else if (list.size() == 0) {
+            modelAndView.addObject("message", "Поиск не дал результата или введены некоректные данные! ");
+            modelAndView.addObject("currentPage", 1);
+            modelAndView.addObject("lastPage", 0);
+            modelAndView.addObject("endIndex", 0);
+        } else {
+            modelAndView.addObject("journal", list);
+        }
         return modelAndView;
     }
 }

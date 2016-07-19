@@ -23,12 +23,11 @@ import java.util.List;
  */
 @Service
 public class UserServiceImpl implements UserService {
+    private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
     @Autowired
     private UserRepository userRepository;
     @Autowired
     private ConvertUtilUser convertUtilUser;
-
-    private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
 
     @Override
     public StatusDTO addUser(UserDTO userDTO) {

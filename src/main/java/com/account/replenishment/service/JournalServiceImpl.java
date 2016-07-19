@@ -30,6 +30,8 @@ import java.util.List;
  */
 @Service
 public class JournalServiceImpl implements JournalService {
+    private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(JournalServiceImpl.class);
+
     @Autowired
     private JournalRepository journalRepository;
     @Autowired
@@ -37,17 +39,16 @@ public class JournalServiceImpl implements JournalService {
     @Autowired
     private UserRepository userRepository;
 
-    private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(JournalServiceImpl.class);
-
     @Override
     public List<JournalDTO> getJournalsFromCustomPeriod(Date bottomLimit, Date upperLimit, Pageable pageRequest) {
-        List<JournalDTO> journalDTOList = new ArrayList<>();
+        List<JournalDTO> journalDTOList;
         try {
             journalDTOList = convertUtilJournal
                     .convertJournalListToJournalDTOlList(journalRepository
                             .getJournalsFromCustomPeriod(bottomLimit, upperLimit, pageRequest));
         } catch (HibernateException e) {
             LOGGER.error("{}", e.toString(), e);
+            journalDTOList = null;
         }
         return journalDTOList;
     }
