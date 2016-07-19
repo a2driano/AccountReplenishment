@@ -12,3 +12,13 @@ can fill money to balance current user
 (click to E-mail and enter balance fill sum), can search from e-mail. From the link, 
 admin can review journal of users replenishment sum, date and search from time period. 
 All page with list of info have a pagination.
+
+Security url:
+
+"/","/signup" - any role;
+
+"/userpage" - for role USER and ADMIN;
+
+"/admin","/admin_journal" - for role ADMIN.
+
+After fill DB you can sign in to application: e-mail:"1", password:"1".
