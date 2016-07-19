@@ -234,11 +234,6 @@ INSERT INTO USERS (id_user, email_user, password_user, balance_user, registratio
 INSERT INTO USERS (id_user, email_user, password_user, balance_user, registration_date, role) VALUES (
   115,'bretonDnepr@gmail.com', '111', 2750.00, '2016-03-29 15:42:37', 'USER');
 
--- ADMIN
-
--- INSERT INTO ADMIN (id_admin, email_admin, password_admin, role) VALUES (1,'alduin@gmail.com', '11', 'ADMIN');
--- INSERT INTO ADMIN (id_admin, email_admin, password_admin, role) VALUES (2,'paarthurnax@gmail.com', '1', 'ADMIN');
--- INSERT INTO ADMIN (id_admin, email_admin, password_admin, role) VALUES (3,'1', '1', 'ADMIN');
 
 -- JOURNAL
 
@@ -246,53 +241,53 @@ INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_
 INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (2,'2015-11-05 19:16:07',12.12,2,8);
 INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (3,'2015-12-05 19:16:07',58,3,7);
 INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (4,'2016-01-05 19:16:07',77,1,35);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (5,'2016-07-14 18:15:30',10,2,13);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (6,'2016-07-14 18:15:35',20,2,13);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (7,'2016-07-14 18:17:57',20,3,4);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (8,'2016-07-14 18:18:18',20,3,10);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (9,'2016-07-14 18:18:21',20,3,10);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (10,'2016-07-14 18:18:25',30,2,10);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (11,'2016-07-14 18:18:30',15,3,7);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (12,'2016-07-14 18:18:54',150.36,2,15);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (13,'2016-07-14 18:18:57',45,2,19);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (14,'2016-07-14 18:19:00',12,7,22);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (15,'2016-07-14 18:19:04',556,2,16);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (16,'2016-07-14 18:19:11',857.23,7,24);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (17,'2016-07-14 18:19:13',23,2,29);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (18,'2016-07-14 18:19:18',890,2,32);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (19,'2016-07-14 18:19:22',478,2,33);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (20,'2016-07-14 18:19:26',78,1,38);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (21,'2016-07-14 18:19:28',5,2,35);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (22,'2016-07-14 18:19:30',1,1,37);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (23,'2016-07-14 18:19:33',221,1,39);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (24,'2016-07-14 18:19:36',324.3,1,41);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (25,'2016-07-14 18:20:13',45,1,41);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (26,'2016-07-14 18:20:17',346,2,39);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (27,'2016-07-14 18:20:23',50,2,51);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (28,'2016-07-14 18:20:26',25,3,51);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (29,'2016-07-14 18:20:31',7888,2,55);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (30,'2016-07-14 18:20:35',453,3,59);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (31,'2016-07-14 18:20:38',100,2,62);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (32,'2016-07-14 18:20:43',45,2,67);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (33,'2016-07-14 18:20:46',587,3,72);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (34,'2016-07-14 18:20:49',56,2,73);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (35,'2016-07-14 18:20:53',5,2,75);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (36,'2016-07-14 18:20:55',335,3,80);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (37,'2016-07-14 18:20:59',56.3,2,82);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (38,'2016-07-14 18:21:01',4,1,83);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (39,'2016-07-14 18:21:05',899,2,90);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (40,'2016-07-14 18:21:08',0.25,1,90);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (41,'2016-07-14 18:21:10',5,2,92);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (42,'2016-07-14 18:21:12',6,2,93);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (43,'2016-07-14 18:21:17',125,2,96);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (44,'2016-07-14 18:21:19',789,2,102);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (45,'2016-07-14 18:21:21',5,2,102);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (46,'2016-07-14 18:21:26',56,3,110);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (47,'2016-07-14 18:21:31',56,3,114);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (48,'2016-07-14 19:45:23',50,3,106);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (49,'2016-07-14 19:45:26',20,2,109);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (50,'2016-07-14 19:45:28',11,3,111);
-INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (51,'2016-07-14 19:45:32',7888,1,112);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (5,'2016-01-14 18:15:30',10,2,13);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (6,'2016-01-15 18:15:35',20,2,13);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (7,'2016-01-15 18:17:57',20,3,4);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (8,'2016-02-14 18:18:18',20,3,10);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (9,'2016-02-17 18:18:21',20,3,10);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (10,'2016-02-18 18:18:25',30,2,10);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (11,'2016-02-19 18:18:30',15,3,7);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (12,'2016-02-19 18:18:54',150.36,2,15);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (13,'2016-02-20 18:18:57',45,2,19);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (14,'2016-02-20 18:19:00',12,7,22);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (15,'2016-02-25 18:19:04',556,2,16);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (16,'2016-03-01 18:19:11',857.23,7,24);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (17,'2016-03-02 18:19:13',23,2,29);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (18,'2016-03-03 18:19:18',890,2,32);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (19,'2016-03-04 18:19:22',478,2,33);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (20,'2016-03-05 18:19:26',78,1,38);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (21,'2016-03-06 18:19:28',5,2,35);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (22,'2016-03-15 18:19:30',1,1,37);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (23,'2016-03-16 18:19:33',221,1,39);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (24,'2016-03-18 18:19:36',324.3,1,41);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (25,'2016-03-19 18:20:13',45,1,41);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (26,'2016-04-02 18:20:17',346,2,39);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (27,'2016-04-03 18:20:23',50,2,51);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (28,'2016-04-04 18:20:26',25,3,51);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (29,'2016-04-05 18:20:31',7888,2,55);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (30,'2016-04-06 18:20:35',453,3,59);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (31,'2016-04-07 18:20:38',100,2,62);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (32,'2016-04-08 18:20:43',45,2,67);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (33,'2016-04-09 18:20:46',587,3,72);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (34,'2016-05-01 18:20:49',56,2,73);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (35,'2016-05-22 18:20:53',5,2,75);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (36,'2016-05-23 18:20:55',335,3,80);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (37,'2016-05-24 18:20:59',56.3,2,82);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (38,'2016-05-25 18:21:01',4,1,83);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (39,'2016-05-29 18:21:05',899,2,90);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (40,'2016-05-30 18:21:08',0.25,1,90);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (41,'2016-05-30 18:21:10',5,2,92);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (42,'2016-06-01 18:21:12',6,2,93);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (43,'2016-06-02 18:21:17',125,2,96);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (44,'2016-06-05 18:21:19',789,2,102);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (45,'2016-06-07 18:21:21',5,2,102);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (46,'2016-06-10 18:21:26',56,3,110);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (47,'2016-06-12 18:21:31',56,3,114);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (48,'2016-07-02 19:45:23',50,3,106);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (49,'2016-07-05 19:45:26',20,2,109);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (50,'2016-07-10 19:45:28',11,3,111);
+INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (51,'2016-07-12 19:45:32',7888,1,112);
 INSERT INTO `journal` (`id_journal`,`date_journal`,`sum_journal`,`id_admin`,`id_user`) VALUES (52,'2016-07-14 19:45:38',12.25,2,104);
 
 
