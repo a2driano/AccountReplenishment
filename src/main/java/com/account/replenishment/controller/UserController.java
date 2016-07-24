@@ -1,5 +1,6 @@
 package com.account.replenishment.controller;
 
+import com.account.replenishment.model.Status;
 import com.account.replenishment.model.StatusDTO;
 import com.account.replenishment.model.UserRole;
 import com.account.replenishment.model.web.UserDTO;
@@ -44,20 +45,21 @@ public class UserController {
      */
     @RequestMapping(value = "/signup", method = RequestMethod.GET)
     public String registrationPage() {
-        return "signup";
+        return "signupuser";
     }
 
     /**
      * Method do few operation:
      * 1. Validation E-mail input (for non-empty and write valid correctly).
-     * 2. This E-mail equals in DB?
+     * 2. This E-mail equals any E-mail in DB?
      * 3. Password and repeat password must be equals.
      * 4. All errors method return to User.
      * 5. If no errors - save new User and make the role is 'User'.
      */
     @RequestMapping(value = "/signup", method = RequestMethod.POST)
-    public ModelAndView saveNewUser(@ModelAttribute("userReg") @Valid UserRegistration userRegistration, BindingResult result) {
-        ModelAndView modelAndView = new ModelAndView("signup");
+    public ModelAndView saveNewUser(@ModelAttribute("userReg") @Valid UserRegistration userRegistration,
+                                    BindingResult result) {
+        ModelAndView modelAndView = new ModelAndView("signupuser");
         String email = userRegistration.getEmail();
         String password = userRegistration.getPassword();
         String passwordRepeat = userRegistration.getPasswordRepeat();
@@ -79,7 +81,7 @@ public class UserController {
             userDTO.setBalance(0.0);
             userDTO.setUserRole(UserRole.USER);
             StatusDTO statusDTO = userService.addUser(userDTO);
-            if (statusDTO.getStatus().name() == "FAIL") {
+            if (statusDTO == null || statusDTO.getStatus() == Status.FAIL) {
                 return modelAndView.addObject("messageErrorEmail", "Ошибка сервера! Повторите через 5 минут!");
             }
             modelAndView.addObject("messageSuccess", "Ваш аккаунт успешно создан!");
@@ -101,7 +103,7 @@ public class UserController {
      */
     @RequestMapping(value = "/userpage", method = RequestMethod.GET)
     public ModelAndView userPage() {
-        ModelAndView modelAndView = new ModelAndView("userpage");
+        ModelAndView modelAndView = new ModelAndView("myuserpage");
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String email = auth.getName();
         UserDTO userDTO = userService.getUserByEmail(email);

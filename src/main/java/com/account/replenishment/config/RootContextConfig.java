@@ -44,9 +44,9 @@ public class RootContextConfig {
 
         Map<String, Object> jpaProperties = new HashMap<>();
         jpaProperties.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
-//        jpaProperties.put("hibernate.hbm2ddl.auto", "create-drop");
+        jpaProperties.put("hibernate.hbm2ddl.auto", "create-drop");
 //        jpaProperties.put("hibernate.hbm2ddl.auto", "create");
-        jpaProperties.put("hibernate.hbm2ddl.auto", "validate");
+//        jpaProperties.put("hibernate.hbm2ddl.auto", "validate");
         jpaProperties.put("hibernate.show_sql", "true");
         jpaProperties.put("hibernate.format_sql", "true");
         jpaProperties.put("hibernate.use_sql_comments", "true");
