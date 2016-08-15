@@ -1,36 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
   <data-source name="MySQL - test@localhost" uuid="041fd0a6-b509-42fc-9c2e-ac3e7c7b47aa">
-    <database-info product="MySQL" version="5.7.13-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
-      <extra-name-characters>#@</extra-name-characters>
-      <identifier-quote-string>`</identifier-quote-string>
-    </database-info>
-    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
-    <schema name="" catalog="test"/>
-    <table name="journal" schema="" catalog="test" type="TABLE">
-      <column name="id_journal" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="date_journal" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
-      <column name="sum_journal" sqlType="DOUBLE" precision="22" scale="0" nullable="true" jdbcType="8"/>
-      <column name="id_admin" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
-      <column name="id_user" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
-      <primary-key name="PRIMARY" columns="id_journal"/>
-      <foreign-key name="FKbcwnpqq0mmp6y76p77gg33veh" columns="id_user" ref-table="users" ref-schema="" ref-catalog="test" ref-columns="id_user" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="FKhttqswt36557edj7gerdcaycs" columns="id_admin" ref-table="users" ref-schema="" ref-catalog="test" ref-columns="id_user" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="FKbcwnpqq0mmp6y76p77gg33veh" unique="false" columns="id_user"/>
-      <index name="FKhttqswt36557edj7gerdcaycs" unique="false" columns="id_admin"/>
-    </table>
-    <table name="users" schema="" catalog="test" type="TABLE">
-      <column name="id_user" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="balance_user" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
-      <column name="email_user" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
-      <column name="id_admin" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
-      <column name="password_user" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
-      <column name="registration_date" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
-      <column name="role" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="id_user"/>
-      <exported-key name="FKbcwnpqq0mmp6y76p77gg33veh" table="journal" schema="" catalog="test" columns="id_user"/>
-      <exported-key name="FKhttqswt36557edj7gerdcaycs" table="journal" schema="" catalog="test" columns="id_admin"/>
-      <index name="UK_sgpbvva83aaeroqfb77028a38" unique="true" columns="email_user"/>
-    </table>
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
   </data-source>
 </component>

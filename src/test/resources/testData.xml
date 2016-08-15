@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dataset>
+    <USERS id_user='1'
+           email_user="uriel@yandex.ru"
+           password_user="root"
+           balance_user="650.00"
+           registration_date="2016-03-31 11:42:37"
+           role="USER"/>
+    <USERS id_user='2'
+           email_user="dovahkiin@gmail.com"
+           password_user="123"
+           balance_user="150.00"
+           registration_date="2016-01-31 11:42:37"
+           role="USER"/>
+    <USERS id_user='3'
+           email_user="admin@gmail.com"
+           password_user="123"
+           balance_user="150.00"
+           registration_date="2016-01-31 11:42:37"
+           role="ADMIN"/>
+
+    <JOURNAL id_journal='4'
+             date_journal="2015-10-05 19:16:07"
+             sum_journal="100.10"
+             id_admin="3"
+             id_user="2"/>
+
+    <JOURNAL id_journal='5'
+             date_journal="2016-05-05 19:16:07"
+             sum_journal="20"
+             id_admin="3"
+             id_user="1"/>
+</dataset>

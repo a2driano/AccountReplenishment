@@ -91,8 +91,9 @@ public class User {
         return userRole;
     }
 
-    public void setUserRole(UserRole userRole) {
+    public User setUserRole(UserRole userRole) {
         this.userRole = userRole;
+        return null;
     }
 
     public List<Journal> getJournalList() {
@@ -109,5 +110,39 @@ public class User {
 
     public void setJournalListAdmin(List<Journal> journalListAdmin) {
         this.journalListAdmin = journalListAdmin;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        User user = (User) o;
+
+        if (idUser != null ? !idUser.equals(user.idUser) : user.idUser != null) return false;
+        if (idAdmin != null ? !idAdmin.equals(user.idAdmin) : user.idAdmin != null) return false;
+        if (email != null ? !email.equals(user.email) : user.email != null) return false;
+        if (password != null ? !password.equals(user.password) : user.password != null) return false;
+        if (balance != null ? !balance.equals(user.balance) : user.balance != null) return false;
+        if (registrationDate != null ? !registrationDate.equals(user.registrationDate) : user.registrationDate != null)
+            return false;
+        if (userRole != user.userRole) return false;
+        if (journalList != null ? !journalList.equals(user.journalList) : user.journalList != null) return false;
+        return !(journalListAdmin != null ? !journalListAdmin.equals(user.journalListAdmin) : user.journalListAdmin != null);
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = idUser != null ? idUser.hashCode() : 0;
+        result = 31 * result + (idAdmin != null ? idAdmin.hashCode() : 0);
+        result = 31 * result + (email != null ? email.hashCode() : 0);
+        result = 31 * result + (password != null ? password.hashCode() : 0);
+        result = 31 * result + (balance != null ? balance.hashCode() : 0);
+        result = 31 * result + (registrationDate != null ? registrationDate.hashCode() : 0);
+        result = 31 * result + (userRole != null ? userRole.hashCode() : 0);
+        result = 31 * result + (journalList != null ? journalList.hashCode() : 0);
+        result = 31 * result + (journalListAdmin != null ? journalListAdmin.hashCode() : 0);
+        return result;
     }
 }

@@ -1,6 +1,5 @@
 package com.account.replenishment.controller;
 
-import com.account.replenishment.config.ServletContextConfig;
 import com.account.replenishment.config.WebAppInitializer;
 import com.account.replenishment.model.Status;
 import com.account.replenishment.model.StatusDTO;
@@ -17,7 +16,6 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.http.MediaType;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.test.context.ContextConfiguration;
@@ -27,9 +25,7 @@ import org.springframework.test.web.server.setup.MockMvcBuilders;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
@@ -62,7 +58,6 @@ public class UserControllerTest {
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("login"));
-
     }
 
     @Test

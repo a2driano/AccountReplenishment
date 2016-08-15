@@ -28,7 +28,7 @@ public class AuthProvider implements AuthenticationProvider {
         String password = (String) authentication.getCredentials();
         try {
             User user = userRepository.getUserByEmail(login);
-            return new UsernamePasswordAuthenticationToken(login, password, AuthorityUtils.createAuthorityList(user.getUserRole().name()));
+            return new UsernamePasswordAuthenticationToken(login, password, AuthorityUtils.createAuthorityList("ROLE_"+user.getUserRole().name()));
         } catch (Exception e) {
             throw new BadCredentialsException("Name or password is not correct");
         }

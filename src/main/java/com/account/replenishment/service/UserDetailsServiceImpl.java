@@ -29,7 +29,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         try {
             User user = userRepository.getUserByEmail(email);
             Set<GrantedAuthority> roles = new HashSet<GrantedAuthority>();
-            roles.add(new SimpleGrantedAuthority(user.getUserRole().name()));
+            roles.add(new SimpleGrantedAuthority("ROLE_"+user.getUserRole().name()));
             userDetails = new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(), roles);
             return userDetails;
         } catch (EmptyResultDataAccessException e) {

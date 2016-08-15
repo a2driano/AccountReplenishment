@@ -5,8 +5,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.config.annotation.web.servlet.configuration.EnableWebMvcSecurity;
+//import org.springframework.security.config.annotation.web.servlet.configuration.EnableWebMvcSecurity;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 /**
@@ -16,7 +17,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
  * @since 15.07.2016
  */
 @Configuration
-@EnableWebMvcSecurity
+//@EnableWebMvcSecurity
+@EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserDetailsService userDetailsService;
@@ -43,10 +45,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/resources/**").permitAll()
 //                .antMatchers("/").permitAll()
                 .antMatchers("/signup").permitAll()
-                .antMatchers("/userpage").access("hasRole('USER') or hasRole('ADMIN')")
-                .antMatchers("/add").access("hasRole('ADMIN')")
-                .antMatchers("/admin/**").access("hasRole('ADMIN')")
-                .antMatchers("/admin_journal/**").access("hasRole('ADMIN')")
+                .antMatchers("/userpage").access("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")
+                .antMatchers("/add").access("hasRole('ROLE_ADMIN')")
+                .antMatchers("/admin/**").access("hasRole('ROLE_ADMIN')")
+                .antMatchers("/admin_journal/**").access("hasRole('ROLE_ADMIN')")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin().loginPage("/").permitAll()

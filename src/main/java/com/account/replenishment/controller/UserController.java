@@ -89,7 +89,7 @@ public class UserController {
             auth.add(new GrantedAuthority() {
                 @Override
                 public String getAuthority() {
-                    return UserRole.USER.name();
+                    return "ROLE_"+UserRole.USER.name();
                 }
             });
             UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(userDTO.getEmail(), userDTO.getPassword(), auth);

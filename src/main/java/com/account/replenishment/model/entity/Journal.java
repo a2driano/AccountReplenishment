@@ -69,4 +69,29 @@ public class Journal {
     public void setAdmin(User admin) {
         this.admin = admin;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Journal journal = (Journal) o;
+
+        if (idJournal != null ? !idJournal.equals(journal.idJournal) : journal.idJournal != null) return false;
+        if (sum != null ? !sum.equals(journal.sum) : journal.sum != null) return false;
+        if (dateJournal != null ? !dateJournal.equals(journal.dateJournal) : journal.dateJournal != null) return false;
+        if (user != null ? !user.equals(journal.user) : journal.user != null) return false;
+        return !(admin != null ? !admin.equals(journal.admin) : journal.admin != null);
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = idJournal != null ? idJournal.hashCode() : 0;
+        result = 31 * result + (sum != null ? sum.hashCode() : 0);
+        result = 31 * result + (dateJournal != null ? dateJournal.hashCode() : 0);
+        result = 31 * result + (user != null ? user.hashCode() : 0);
+        result = 31 * result + (admin != null ? admin.hashCode() : 0);
+        return result;
+    }
 }

@@ -31,10 +31,15 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public StatusDTO addUser(UserDTO userDTO) {
-        User user = convertUtilUser.convertUserDTOToUser(userDTO);
+        User user;
         StatusDTO statusDTO = new StatusDTO();
         try {
-            user = userRepository.saveAndFlush(user);
+            if (userDTO == null) {
+                statusDTO.setStatus(Status.FAIL);
+                return statusDTO;
+            }
+            user = convertUtilUser.convertUserDTOToUser(userDTO);
+            userRepository.saveAndFlush(user);
             statusDTO.setStatus(Status.SUCCESS);
         } catch (HibernateException e) {
             LOGGER.error("{}", e.toString(), e);
